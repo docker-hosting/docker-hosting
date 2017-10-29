@@ -110,6 +110,8 @@ backup:
 restore:
     script: 'restore/restore.sh'
     archive: 'restore/restore.zip'
+
+disabled: false
 ````
 
 ### options
@@ -139,6 +141,9 @@ Default is `restore/restore.sh`.
 #### restore/archive
 Before the restore script is executed *docker hosting* will restore this archive from the backup storage, configured in the `docker-hosting/docker-hosting.yml` config file.  
 Default is `restore/restore.zip`.
+
+#### disabled
+If you want to temporarily disable a website you can do this by setting the `disabled` flag to `true`. This option defaults to `false`, which means by default is every web site enabled.
 
 
 ## Docker hosting configuration
